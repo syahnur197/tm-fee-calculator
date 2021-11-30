@@ -51,6 +51,7 @@ export default function Home() {
   return (
     <div className="container mx-auto my-24 flex flex-col gap-4">
       <h1 className="text-xl font-bold mb-4">TM Fee Calculator</h1>
+      <p className="mb-2 text-gray-700">Please enter your club's membership start month, registration fee, and also the annual fee. This calculator will auto calculate the prorated amount new member needs to pay.</p>
       <div className="flex flex-col gap-2">
         <label>Start Month</label>
         <select className="py-2 px-4 border border-gray-400" value={startMonth} onChange={handleChange}>
@@ -66,7 +67,10 @@ export default function Home() {
         <input type="text" className="py-2 px-4 border border-gray-400" value={annualFee} onChange={e => setAnnualFee(Number(e.target.value))}/>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-6">
+        <p className="mb-2 text-gray-700">
+          The total amount the member needs to pay depends on which month they joined your TM Club
+        </p>
         <table className="min-w-full divide-y divide-gray-200 border border-gray-200">
           <thead className="bg-gray-50">
             <tr>
