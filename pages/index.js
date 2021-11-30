@@ -1,12 +1,11 @@
-import { useEffect } from "react";
-import { useState } from "react/cjs/react.development"
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
   const [startMonth, setStartMonth] = useState('April');
   const [regFee, setRegFee] = useState(45);
   const [annualFee, setAnnualFee] = useState(290);
-  const [tmMonths, setTmMonths] = useState([]);
+  const [tmMonths, setTmMonths] = useState(['January']);
 
   const months = [
     'January', 'February', 'March', 'April', 'May',
