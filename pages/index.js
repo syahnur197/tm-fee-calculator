@@ -55,7 +55,7 @@ export default function Home() {
       <div className="flex flex-col gap-2">
         <label>Start Month</label>
         <select className="py-2 px-4 border border-gray-400" value={startMonth} onChange={handleChange}>
-          {months.map(month => <option value={month}>{month}</option>)}
+          {months.map(month => <option key={month} value={month}>{month}</option>)}
         </select>
       </div>
       <div className="flex flex-col gap-2">
